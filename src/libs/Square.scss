@@ -1,0 +1,78 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background: #f9f7f5;
+  cursor: pointer;
+  outline: none;
+  font-size: 115px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  &:hover {
+    background: transparent;
+    transition: 0.1s all ease;
+  }
+}
+
+.square[data-player="X"] {
+  color: #8e9ef5;
+}
+
+.square[data-player="O"] {
+  color: #eb8193;
+}
+
+.square[data-win="0"] {
+  color: green;
+}
+.square[data-win="1"] {
+  color: green;
+}
+.square[data-win="2"] {
+  color: green;
+}
+.square[data-win="3"] {
+  color: green;
+}
+.square[data-win="4"] {
+  color: green;
+}
+.square[data-win="5"] {
+  color: green;
+}
+.square[data-win="6"] {
+  color: green;
+}
+.square[data-win="7"] {
+  color: green;
+}
+.square[data-win="8"] {
+  color: green;
+}
+
+.square[data-line="0"],
+.square[data-line="1"],
+.square[data-line="2"] {
+  border-bottom: 2px solid #c7c5c3;
+}
+
+.square[data-line="2"],
+.square[data-line="5"],
+.square[data-line="8"] {
+  border-left: 2px solid #c7c5c3;
+}
+
+.square[data-line="6"],
+.square[data-line="7"],
+.square[data-line="8"] {
+  border-top: 2px solid #c7c5c3;
+}
+
+.square[data-line="0"],
+.square[data-line="3"],
+.square[data-line="6"] {
+  border-right: 2px solid #c7c5c3;
+}

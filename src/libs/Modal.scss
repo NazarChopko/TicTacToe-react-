@@ -1,0 +1,82 @@
+.modal {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &_content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    position: relative;
+
+    div {
+      text-align: center;
+      font-size: x-large;
+      h2 {
+        font-size: 50px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      li {
+        width: 220px;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      li:first-child {
+        border: 3px solid #8e9ef5;
+        margin-top: 10px;
+      }
+      li:last-child {
+        margin-top: 10px;
+        border: 3px solid #eb8193;
+      }
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 8px;
+      left: 225px;
+      border: 1px solid rgb(67, 193, 202);
+      background-color: white;
+      color: black;
+      font-size: 25px;
+      cursor: pointer;
+      transition: all 0.4s ease-out;
+
+      &:hover {
+        background-color: rgb(67, 193, 202);
+        color: white;
+        border-radius: 3px;
+      }
+    }
+
+    &.active {
+      transform: scale(1);
+    }
+  }
+}
