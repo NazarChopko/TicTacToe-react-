@@ -1,9 +1,11 @@
-import React, {useContext} from 'react'
+import React, {useContext,useState} from 'react'
 import WinnerContext from '../context'
 
 
 
 function Square({value,click,idx}) {
+
+    const [isLoading,setIsLoading] = useState(false)
 
     const context = useContext(WinnerContext)
 
